@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 27
+/svn/!svn/ver/10/trunk/ooge
+END
+DemoGame.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/22/trunk/ooge/DemoGame.cpp
+END
+DemoFont.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/20/trunk/ooge/DemoFont.hpp
+END
+DemoSprite.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/22/trunk/ooge/DemoSprite.hpp
+END
+StateManager.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/20/trunk/ooge/StateManager.hpp
+END
+DemoSound.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/21/trunk/ooge/DemoSound.hpp
+END
+DemoGame.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/22/trunk/ooge/DemoGame.hpp
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/22/trunk/ooge/main.cpp
+END
+State.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/20/trunk/ooge/State.hpp
+END
+ooge.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/22/trunk/ooge/ooge.vcproj
+END
+DemoFont.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/22/trunk/ooge/DemoFont.cpp
+END
+DemoSprite.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/22/trunk/ooge/DemoSprite.cpp
+END
+StateManager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/20/trunk/ooge/StateManager.cpp
+END
+DemoSound.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/22/trunk/ooge/DemoSound.cpp
+END

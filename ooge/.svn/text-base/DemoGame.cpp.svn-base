@@ -1,0 +1,237 @@
+#include "DemoGame.hpp"
+#include <Scene.hpp>
+#include <SpriteAnimation.hpp>
+#include <KeyboardListener.hpp>
+#include <MouseListener.hpp>
+#include <InputManager.hpp>
+#include <Circle.hpp>
+#include <Square.hpp>
+#include <Font.hpp>
+#include <Text.hpp>
+#include <Image.hpp>
+#include <StringUtil.hpp>
+
+using namespace ooge;
+
+DemoGame::DemoGame(const std::string &name, ooge::Scene *scene)
+:mScene(scene), State(name), mKeyboard(InputManager::GetSingletonPtr()->GetKeyboardListener()),
+mMouse(InputManager::GetSingletonPtr()->GetMouseListener()), mWorld(new PhysicsWorld(scene, ooge::Vector2(0,10), true)), mDrawLine(false)
+{
+	mObjectType = false;
+	mPhysType = ooge::STATIC;
+	mCreationType = 0;
+	mAngle = 0;
+}
+
+DemoGame::~DemoGame()
+{
+}
+
+void DemoGame::CreateObject(Vector2 &position, int type)
+{
+	if(type == 0)
+	{
+		ActorDescription des;
+		des.Position = position;
+		des.Density = 2.0f;
+		des.Friction = 0.2f;
+
+		ooge::Sprite *sprite = new ooge::Sprite("data/box.png", "box");
+		sprite->SetOrder(2);
+		ooge::PhysicsObject *obj = new ooge::PhysicsObject(sprite, &des, mPhysType, ooge::SQUARE);
+		mWorld->AddActor(obj);
+		mActiveObjects.push_back(obj);
+	}
+	if(type == 1)
+	{
+		ActorDescription des;
+		des.Position = position;
+		des.Density = 2.0f;
+		des.Friction = 0.2f;
+
+		ooge::Sprite *sprite = new ooge::Sprite("data/ball.png", "box");
+		sprite->SetOrder(2);
+		ooge::PhysicsObject *obj = new ooge::PhysicsObject(sprite, &des, mPhysType, ooge::CIRCLE);
+		mWorld->AddActor(obj);
+		mActiveObjects.push_back(obj);
+	}
+}
+
+void DemoGame::Update(float deltaT)
+{
+	static bool thisflip = false;
+	if(mMouse->IsPressed(ooge::BUTTON_LEFT))
+	{
+		mPositions.push_back(mMouse->GetMousePosition());
+		if(mCreationType == 0)
+		{
+			ooge::Square *square = new ooge::Square(30,30,"placehold", mMouse->GetMousePosition());
+			square->SetColour(255,0,0);
+			mScene->AddRenderable(square);
+			mPlaceHolder.push_back(square);
+		}
+		if(mCreationType == 1)
+		{
+			ooge::Circle *square = new ooge::Circle(30,"placehold", mMouse->GetMousePosition());
+			square->SetColour(255,0,0);
+			mScene->AddRenderable(square);
+			mPlaceHolder.push_back(square);
+		}
+		if(mCreationType == 2)
+		{
+			if(mDrawLine = !mDrawLine)
+			{
+				mDrawLineObj = new ooge::Sprite("data/plank.png", "draw", mMouse->GetMousePosition());
+				mPlaceHolder.push_back(mDrawLineObj);
+				mScene->AddRenderable(mDrawLineObj);
+				mDrawLine = true;
+			}
+			else
+			{
+				mDrawLine = false;
+			}
+		}
+	}
+	if(mDrawLine && !mPositions.empty())
+	{
+		float x = ((int)(mPositions[0].X - mMouse->GetMousePosition().X) ^ -true) + true;
+		float y = ((int)(mPositions[0].Y - mMouse->GetMousePosition().Y) ^ -true) + true;
+		if(!thisflip)
+		{
+			mDrawLineObj->SetPosition(Vector2(mMouse->GetMousePosition().X - (x/2),mMouse->GetMousePosition().Y - (y/2)));
+			mDrawLineObj->GetImage()->SetWidth(x);
+			mDrawLineObj->GetImage()->SetHeight(y);
+			mPosition = Vector2(mMouse->GetMousePosition().X - (x/2),mMouse->GetMousePosition().Y - (y/2));
+		}
+		else
+		{
+			mPositions.push_back(mMouse->GetMousePosition());
+			mAngle = y/2;
+			mDrawLineObj->SetRotation(y/2);
+		}
+
+		if(mKeyboard->IsKeyDown(ooge::KEY_SPACE))
+		{
+			if(thisflip = !thisflip)
+				thisflip = true;
+			else
+				thisflip = false;
+		}
+	}
+
+	if(mObjectType)
+	{
+		mText->SetText("Object type: Dynamic");
+		mPhysType = ooge::DYNAMIC;
+	}
+	else
+	{
+		mText->SetText("Object type: Static");
+		mPhysType = ooge::STATIC;
+	}
+
+	if(mKeyboard->IsKeyDown('t'))
+	{
+		if(mObjectType = !mObjectType)
+			mObjectType = true;
+		else
+			mObjectType = false;
+	}
+	if(mKeyboard->IsKeyDown('y'))
+	{
+		mCreationType++;
+		if(mCreationType > 2)
+			mCreationType = 0;
+	}
+
+	if(mCreationType == 0)
+		mText2->SetText("Type: Square");
+	if(mCreationType == 1)
+		mText2->SetText("Type: Ball");
+	if(mCreationType == 2)
+		mText2->SetText("Type: Draw");
+
+	if(mKeyboard->IsKeyDown('c'))
+	{
+		if(mCreationType != 2)
+		{
+			for(int i = 0; i < mPositions.size(); ++i)
+				CreateObject(mPositions[i], mCreationType);
+		}	
+
+		for(int i = 0; i < mPlaceHolder.size(); ++i)
+			mScene->RemoveRenderable(mPlaceHolder[i]);
+
+		mPositions.clear();
+		mPlaceHolder.clear();
+	}
+
+	if(mPositions.size() >= 2 && mCreationType == 2)
+	{
+		ActorDescription des;
+		des.Position = mPosition;
+		des.Density = 2.0f;
+		des.Friction = 0.2f;
+		float width = ((int)(mPositions[0].X - mPositions[0 + 1].X) ^ -true) + true;
+		float height = ((int)(mPositions[0].Y - mPositions[0 + 1].Y) ^ -true) + true;
+		ooge::PhysicsObject *obj = new ooge::PhysicsObject(width,height, &des, mPhysType);
+		ooge::Sprite *sprite = new ooge::Sprite("data/plank.png","plank");
+		sprite->SetOrder(2);
+		sprite->GetImage()->SetHeight(height);
+		sprite->GetImage()->SetWidth(width);
+		obj->SetRenderable(sprite);
+		obj->SetTransform(Vector2(mPositions[0 + 1].X - (width/2),mPositions[0 + 1].Y - (height/2)), math::ToRadians(mAngle));
+		mAngle = 0;
+		mWorld->AddActor(obj);
+		mActiveObjects.push_back(obj);
+		thisflip = false;
+
+		for(int i = 0; i < mPlaceHolder.size(); ++i)
+			mScene->RemoveRenderable(mPlaceHolder[i]);
+
+		mPositions.clear();
+		mPlaceHolder.clear();
+	}	
+
+	if(mKeyboard->IsKeyDown('p'))
+		ClearScene();
+
+	mWorld->StepWorld(1.0f/60.f);
+}
+
+void DemoGame::ClearScene()
+{
+	if(mActiveObjects.empty());
+	{
+		for(int i = 0; i < mActiveObjects.size(); ++i)
+		{
+			mWorld->RemoveActor(mActiveObjects[i]);
+		}
+	}
+}
+
+void DemoGame::OnEnter()
+{
+	ooge::Sprite *bg = new ooge::Sprite("data/bg.png", "background", ooge::Vector2(512,384));
+	bg->SetOrder(1000);
+	bg->SetBlendMode(ooge::None);
+	mScene->AddRenderable(bg);
+
+	ooge::Sprite *grass = new ooge::Sprite("data/grass.png", "grass", ooge::Vector2(512,685));
+	mScene->AddRenderable(grass);
+	grass->SetOrder(1);
+	ooge::ActorDescription des;
+	mWorld->AddActor(new ooge::PhysicsObject(Vector2(0,700), Vector2(1024,700), &des, ooge::STATIC));
+
+	ooge::Font *font = new ooge::Font("data/arial.ttf", 20);
+	mText = new ooge::Text(font, "Object type: Static", ooge::Vector2(10,10));
+	mText2 = new ooge::Text(font, "Square", ooge::Vector2(10,40));
+	mScene->AddRenderable(mText2);
+	mScene->AddRenderable(mText);
+	mText->SetColour(0,0,0);
+	mText2->SetColour(0,0,0);
+}
+
+void DemoGame::OnExit()
+{
+}

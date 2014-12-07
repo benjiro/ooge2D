@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/10/trunk/source/SceneManager
+END
+Cull.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2/trunk/source/SceneManager/Cull.cpp
+END
+ScreenCull.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/18/trunk/source/SceneManager/ScreenCull.cpp
+END
+Square.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/21/trunk/source/SceneManager/Square.cpp
+END
+Circle.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/21/trunk/source/SceneManager/Circle.cpp
+END
+Renderable.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/12/trunk/source/SceneManager/Renderable.cpp
+END
+Text.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/21/trunk/source/SceneManager/Text.cpp
+END
+Object.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/7/trunk/source/SceneManager/Object.cpp
+END
+Sprite.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/19/trunk/source/SceneManager/Sprite.cpp
+END
+SpriteAnimation.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/21/trunk/source/SceneManager/SpriteAnimation.cpp
+END
+AnimationSequence.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/20/trunk/source/SceneManager/AnimationSequence.cpp
+END
+Camera.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/7/trunk/source/SceneManager/Camera.cpp
+END
+Scene.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/21/trunk/source/SceneManager/Scene.cpp
+END

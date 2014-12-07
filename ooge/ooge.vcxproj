@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugDynamic|Win32">
+      <Configuration>DebugDynamic</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DebugStatic|Win32">
+      <Configuration>DebugStatic</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseDynamic|Win32">
+      <Configuration>ReleaseDynamic</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseStatic|Win32">
+      <Configuration>ReleaseStatic</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5251D413-D6BD-449C-ADEF-7329B9D030C3}</ProjectGuid>
+    <RootNamespace>ooge</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDynamic|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDynamic|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDynamic|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugDynamic|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='DebugDynamic|Win32'">$(SolutionDir)temp\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='DebugDynamic|Win32'">$(SolutionDir)temp\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='DebugDynamic|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ReleaseDynamic|Win32'">$(SolutionDir)temp\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseDynamic|Win32'">$(SolutionDir)temp\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='ReleaseDynamic|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">$(SolutionDir)temp\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">$(SolutionDir)temp\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">$(SolutionDir)temp\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">$(SolutionDir)temp\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)temp\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)temp\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)temp\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)temp\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='DebugDynamic|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='DebugDynamic|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='DebugDynamic|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='ReleaseDynamic|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='ReleaseDynamic|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='ReleaseDynamic|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDynamic|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../dependencies/box2d/;../dependencies/box2d/Box2D;../dependencies/libsndfile;../dependencies/xinput;../dependencies/openAL/include;../dependencies/glew/include;../include;../include/Physics;../include/Audio;../include/ResourceManager;../include/Input;../include/SceneManager;../include/Rendering;../include/Utility;../dependencies;../dependencies/freetype/include;../dependencies/soil/src;../dependencies/glfw/GL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;_DEBUG;OOGE_DYNAMIC;OOGE_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/NODEFAULTLIB:library %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>freetype2311MT_D.lib;GLFWDLL.lib;glu32.lib;opengl32.lib;SOIL.lib;glew32d.lib;Xinput.lib;OpenAL32.lib;libsndfile-1.lib;Box2D.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(SolutionDir)\lib\ooge\Dynamic\$(ProjectName)_D.dll</OutputFile>
+      <AdditionalLibraryDirectories>../lib/Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>NotSet</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDynamic|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>../dependencies/box2d/;../dependencies/box2d/Box2D;../dependencies/libsndfile;../dependencies/xinput;../dependencies/openAL/include;../dependencies/glew/include;../include;../include/Physics;../include/Audio;../include/ResourceManager;../include/Input;../include/SceneManager;../include/Rendering;../include/Utility;../dependencies;../dependencies/freetype/include;../dependencies/soil/src;../dependencies/glfw/GL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;_LIB;OOGE_EXPORT;OOGE_DYNAMIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/NODEFAULTLIB:library %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>freetype2311MT.lib;GLFWDLL.lib;glu32.lib;opengl32.lib;SOIL.lib;glew32.lib;Xinput.lib;OpenAL32.lib;libsndfile-1.lib;box2d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(SolutionDir)\lib\ooge\Dynamic\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>../lib/Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>NotSet</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugStatic|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../dependencies/box2d/;../dependencies/box2d/Box2D;../dependencies/libsndfile;../dependencies/xinput;../dependencies/openAL/include;../dependencies/glew/include;../include;../include/Physics;../include/Audio;../include/ResourceManager;../include/Input;../include/SceneManager;../include/Rendering;../include/Utility;../dependencies;../dependencies/freetype/include;../dependencies/soil/src;../dependencies/glfw/GL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;_DEBUG;OOGE_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(SolutionDir)\lib\ooge\Static\$(ProjectName)_S_D.dll</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>../dependencies/box2d/;../dependencies/box2d/Box2D;../dependencies/libsndfile;../dependencies/xinput;../dependencies/openAL/include;../dependencies/glew/include;../include;../include/Physics;../include/Audio;../include/ResourceManager;../include/Input;../include/SceneManager;../include/Rendering;../include/Utility;../dependencies;../dependencies/freetype/include;../dependencies/soil/src;../dependencies/glfw/GL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;_LIB;OOGE_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(SolutionDir)\lib\ooge\Dynamic\$(ProjectName)_S.dll</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../dependencies/box2d/;../dependencies/box2d/Box2D;../dependencies/libsndfile;../dependencies/xinput;../dependencies/openAL/include;../dependencies/glew/include;../include;../include/Physics;../include/Audio;../include/ResourceManager;../include/Input;../include/SceneManager;../include/Rendering;../include/Utility;../dependencies;../dependencies/freetype/include;../dependencies/soil/src;../dependencies/glfw/GL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers>false</PreprocessSuppressLineNumbers>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/NODEFAULTLIB:library %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>freetype2311MT_D.lib;GLFWDLL.lib;glu32.lib;opengl32.lib;SOIL.lib;glew32d.lib;Xinput.lib;OpenAL32.lib;libsndfile-1.lib;Box2D.lib;psapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(SolutionDir)\bin\$(ProjectName)_D.exe</OutputFile>
+      <AdditionalLibraryDirectories>../lib/Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>NotSet</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>../dependencies/box2d/;../dependencies/box2d/Box2D;../dependencies/libsndfile;../dependencies/xinput;../dependencies/openAL/include;../dependencies/glew/include;../include;../include/Physics;../include/Audio;../include/ResourceManager;../include/Input;../include/SceneManager;../include/Rendering;../include/Utility;../dependencies;../dependencies/freetype/include;../dependencies/soil/src;../dependencies/glfw/GL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/NODEFAULTLIB:library %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>freetype2311MT.lib;GLFWDLL.lib;glu32.lib;opengl32.lib;SOIL.lib;glew32.lib;Xinput.lib;OpenAL32.lib;libsndfile-1.lib;box2d.lib;psapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(SolutionDir)\bin\$(ProjectName)_D.exe</OutputFile>
+      <AdditionalLibraryDirectories>../lib/Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>NotSet</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\source\ResourceManager\Font.cpp" />
+    <ClCompile Include="..\source\ResourceManager\FontManager.cpp" />
+    <ClCompile Include="..\source\ResourceManager\Image.cpp" />
+    <ClCompile Include="..\source\ResourceManager\Loader.cpp" />
+    <ClCompile Include="..\source\Audio\AudioDevice.cpp" />
+    <ClCompile Include="..\source\Audio\Sound.cpp" />
+    <ClCompile Include="..\source\Audio\SoundBuffer.cpp" />
+    <ClCompile Include="..\source\Audio\SoundEffect.cpp" />
+    <ClCompile Include="..\source\Audio\SoundFile.cpp" />
+    <ClCompile Include="..\source\Audio\SoundListener.cpp" />
+    <ClCompile Include="..\source\Audio\SoundStream.cpp" />
+    <ClCompile Include="..\source\Utility\Lock.cpp" />
+    <ClCompile Include="..\source\Utility\Mutex.cpp" />
+    <ClCompile Include="..\source\Utility\StringUtil.cpp" />
+    <ClCompile Include="..\source\Utility\Thread.cpp" />
+    <ClCompile Include="..\source\Utility\Timer.cpp" />
+    <ClCompile Include="..\source\Utility\Vector2.cpp" />
+    <ClCompile Include="..\source\Utility\Vector3.cpp" />
+    <ClCompile Include="..\source\SceneManager\AnimationSequence.cpp" />
+    <ClCompile Include="..\source\SceneManager\Camera.cpp" />
+    <ClCompile Include="..\source\SceneManager\Circle.cpp" />
+    <ClCompile Include="..\source\SceneManager\Cull.cpp" />
+    <ClCompile Include="..\source\SceneManager\Object.cpp" />
+    <ClCompile Include="..\source\SceneManager\Renderable.cpp" />
+    <ClCompile Include="..\source\SceneManager\Scene.cpp" />
+    <ClCompile Include="..\source\SceneManager\ScreenCull.cpp" />
+    <ClCompile Include="..\source\SceneManager\Sprite.cpp" />
+    <ClCompile Include="..\source\SceneManager\SpriteAnimation.cpp" />
+    <ClCompile Include="..\source\SceneManager\Square.cpp" />
+    <ClCompile Include="..\source\SceneManager\Text.cpp" />
+    <ClCompile Include="..\source\Input\Controller.cpp" />
+    <ClCompile Include="..\source\Input\ControllerListener.cpp" />
+    <ClCompile Include="..\source\Input\InputListener.cpp" />
+    <ClCompile Include="..\source\Input\InputManager.cpp" />
+    <ClCompile Include="..\source\Input\KeyboardListener.cpp" />
+    <ClCompile Include="..\source\Input\MouseListener.cpp" />
+    <ClCompile Include="..\source\Physics\PhysicsActor.cpp" />
+    <ClCompile Include="..\source\Physics\PhysicsDebugDraw.cpp" />
+    <ClCompile Include="..\source\Physics\PhysicsObject.cpp" />
+    <ClCompile Include="..\source\Physics\PhysicsWorld.cpp" />
+    <ClCompile Include="DemoFont.cpp" />
+    <ClCompile Include="DemoGame.cpp" />
+    <ClCompile Include="DemoSound.cpp" />
+    <ClCompile Include="DemoSprite.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="StateManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\ResourceManager\Font.hpp" />
+    <ClInclude Include="..\include\ResourceManager\FontManager.hpp" />
+    <ClInclude Include="..\include\ResourceManager\GlyphContainer.hpp" />
+    <ClInclude Include="..\include\ResourceManager\Image.hpp" />
+    <ClInclude Include="..\include\ResourceManager\Loader.hpp" />
+    <ClInclude Include="..\include\Audio\AudioDevice.hpp" />
+    <ClInclude Include="..\include\Audio\Sound.hpp" />
+    <ClInclude Include="..\include\Audio\SoundBuffer.hpp" />
+    <ClInclude Include="..\include\Audio\SoundEffect.hpp" />
+    <ClInclude Include="..\include\Audio\SoundFile.hpp" />
+    <ClInclude Include="..\include\Audio\SoundListener.hpp" />
+    <ClInclude Include="..\include\Audio\SoundStream.hpp" />
+    <ClInclude Include="..\include\Utility\Colour.hpp" />
+    <ClInclude Include="..\include\Utility\Lock.hpp" />
+    <ClInclude Include="..\include\Utility\Math.hpp" />
+    <ClInclude Include="..\include\Utility\Matrix33.hpp" />
+    <ClInclude Include="..\include\Utility\Mutex.hpp" />
+    <ClInclude Include="..\include\Utility\Rect.hpp" />
+    <ClInclude Include="..\include\Utility\Singleton.hpp" />
+    <ClInclude Include="..\include\Utility\StringUtil.hpp" />
+    <ClInclude Include="..\include\Utility\Thread.hpp" />
+    <ClInclude Include="..\include\Utility\Timer.hpp" />
+    <ClInclude Include="..\include\Utility\Vector2.hpp" />
+    <ClInclude Include="..\include\Utility\Vector3.hpp" />
+    <ClInclude Include="..\include\SceneManager\AnimationSequence.hpp" />
+    <ClInclude Include="..\include\SceneManager\Camera.hpp" />
+    <ClInclude Include="..\include\SceneManager\Circle.hpp" />
+    <ClInclude Include="..\include\SceneManager\Cull.hpp" />
+    <ClInclude Include="..\include\SceneManager\Object.hpp" />
+    <ClInclude Include="..\include\SceneManager\Renderable.hpp" />
+    <ClInclude Include="..\include\SceneManager\Scene.hpp" />
+    <ClInclude Include="..\include\SceneManager\SceneDescription.hpp" />
+    <ClInclude Include="..\include\SceneManager\ScreenCull.hpp" />
+    <ClInclude Include="..\include\SceneManager\Sprite.hpp" />
+    <ClInclude Include="..\include\SceneManager\SpriteAnimation.hpp" />
+    <ClInclude Include="..\include\SceneManager\Square.hpp" />
+    <ClInclude Include="..\include\SceneManager\Text.hpp" />
+    <ClInclude Include="..\include\Input\Controller.hpp" />
+    <ClInclude Include="..\include\Input\ControllerListener.hpp" />
+    <ClInclude Include="..\include\Input\InputKeys.hpp" />
+    <ClInclude Include="..\include\Input\InputListener.hpp" />
+    <ClInclude Include="..\include\Input\InputManager.hpp" />
+    <ClInclude Include="..\include\Input\KeyboardListener.hpp" />
+    <ClInclude Include="..\include\Input\MouseListener.hpp" />
+    <ClInclude Include="..\include\Physics\ActorDescription.hpp" />
+    <ClInclude Include="..\include\Physics\PhysicsActor.hpp" />
+    <ClInclude Include="..\include\Physics\PhysicsDebugDraw.hpp" />
+    <ClInclude Include="..\include\Physics\PhysicsListeners.hpp" />
+    <ClInclude Include="..\include\Physics\PhysicsObject.hpp" />
+    <ClInclude Include="..\include\Physics\PhysicsWorld.hpp" />
+    <ClInclude Include="DemoFont.hpp" />
+    <ClInclude Include="DemoGame.hpp" />
+    <ClInclude Include="DemoSound.hpp" />
+    <ClInclude Include="DemoSprite.hpp" />
+    <ClInclude Include="..\include\Common.hpp" />
+    <ClInclude Include="..\include\Config.hpp" />
+    <ClInclude Include="..\include\Ooge.hpp" />
+    <ClInclude Include="State.hpp" />
+    <ClInclude Include="StateManager.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Amplifier Results\r003hs\r003hs.ampl" />
+    <None Include="My Amplifier Results\r004hs\r004hs.ampl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

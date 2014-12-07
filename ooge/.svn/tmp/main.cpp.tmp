@@ -1,0 +1,181 @@
+#include <Ooge.hpp>
+#include <Common.hpp>
+#include <PhysicsBox.hpp>
+#include <PhysicsCircle.hpp>
+#include <PhysicsSprite.hpp>
+
+int main()
+{
+	new ooge::AudioDevice;
+	ooge::Window *win = new ooge::Window();
+	ooge::Scene *scene = ooge::Scene::GetSingletonPtr();
+	ooge::KeyboardListener *keyboard = ooge::InputManager::GetSingletonPtr()->GetKeyboardListener();
+	ooge::MouseListener *mouse = ooge::InputManager::GetSingletonPtr()->GetMouseListener();
+
+<<<<<<< .mine
+	ooge::Sprite *ball = new ooge::Sprite("ball.png", "ball", ooge::Vector2(300,545));
+	ooge::Sprite *paddle = new ooge::Sprite("paddle.png", "paddle", ooge::Vector2(300,550));
+	scene->AddRenderable(ball);
+	scene->AddRenderable(paddle);
+=======
+	//ooge::Sprite *sprite = new ooge::Sprite("cat.jpg", "cat", ooge::Vector2(300,300));
+	//scene->AddRenderable(sprite);
+>>>>>>> .r8
+
+<<<<<<< .mine
+	std::vector<ooge::Sprite*> brickList;
+
+	int nb = 800/30;
+	for(int x = 0; x < nb; ++x)
+	{
+		for(int y = 0; y < 2; ++y)
+		{
+			ooge::Sprite *brick = new ooge::Sprite("box.png", "box");
+			brick->SetPosition(x * brick->GetImage()->GetWidth() + brick->GetImage()->GetWidth(), y* brick->GetImage()->GetWidth() + brick->GetImage()->GetWidth());
+			scene->AddRenderable(brick);
+			brickList.push_back(brick);
+		}
+	}
+
+	ooge::Sound *ballSound = new ooge::Sound("ballHit.wav","ballHit");
+	ooge::Sound *spring = new ooge::Sound("spring.wav", "spring");
+	ooge::Sound *crash = new ooge::Sound("box.aif", "box");
+	ooge::SoundStream *tatw = new ooge::SoundStream("tatw.ogg");
+	tatw->Play();
+	tatw->SetVolume(50);
+
+	ooge::Vector2 ballPos = ball->GetPosition();
+	ooge::Vector2 vel(0.2f,0.2f);
+			scene->RenderOneFrame();
+=======
+	new ooge::PhysicsWorld(ooge::Vector2(0,10), true);
+
+	b2BodyDef groundBodyDef;
+	groundBodyDef.position.Set(0,550);
+	b2Body *ground = ooge::PhysicsWorld::GetSingletonPtr()->GetBox2DWorld()->CreateBody(&groundBodyDef);
+	b2PolygonShape groundBox;
+
+	groundBox.SetAsBox(800, 10.0f);
+	ground->CreateFixture(&groundBox,0);
+
+	ooge::ActorDescription des;
+	des.Density = 1.0f;
+
+	std::vector<ooge::PhysicsSprite*> list;
+	const float cubesize = 30;
+	const float spacing = 0.1f;
+	ooge::Vector2 pos(200, cubesize);
+	int size = 50;
+	for(int i = 0; i < 5; ++i)
+	{
+		pos.Y = 0;
+		size = 10;
+		while(size)
+		{
+			des.Position.Set(pos.X, pos.Y);
+			ooge::PhysicsSprite *box = new ooge::PhysicsSprite("box.png", &des);
+			box->SetColour(rand()%255,rand()%255,rand()%255);
+			scene->AddRenderable(box);
+			list.push_back(box);
+
+			pos.Y += (cubesize * 2.0f + spacing);
+			size--;
+		}
+		pos.X += 100;
+	}
+	int z = 0, x = 800;
+	int force = 10000;
+	int force1 = -10000;
+
+>>>>>>> .r8
+	while(scene->GetStatus())
+	{
+		if(keyboard->IsKeyDown(ooge::KEY_SPACE))
+		{
+			des.Density = 1.0f;
+			z^=x;x^=z; z^=x;
+			force^=force1;force1^=force; force^=force1;
+			des.Position.Set(z,rand()%50+400);
+			ooge::PhysicsCircle *box = new ooge::PhysicsCircle(10,&des,"test");
+			box->SetColour(rand()%255,rand()%255,rand()%255);
+			scene->AddRenderable(box);
+			box->SetLinearVelocity(ooge::Vector2(force,0));
+			box->SetAngularVelocity(1000);
+		}
+
+<<<<<<< .mine
+		if(ballPos.X < 10)
+		{
+			ballSound->Play();
+			vel.X = fabsf(vel.X);
+		}
+		if(ballPos.X > 780)
+		{
+			ballSound->Play();
+			vel.X = -fabsf(vel.X);
+		}
+		if(ballPos.Y < 10)
+		{
+			ballSound->Play();
+			vel.Y = fabsf(vel.Y);
+		}
+		if(ballPos.Y > 580)
+		{
+			ballSound->Play();
+			vel.Y = -fabsf(vel.Y);
+		}
+
+		if(ball->GetRect().Intersect(paddle->GetRect()))
+		{
+			vel.Y = -fabs(vel.Y);
+			spring->Play();
+		}
+
+		for(int i = 0; i < brickList.size(); ++i)
+		{
+			if(ball->GetRect().Intersect(brickList[i]->GetRect()))
+			{
+				crash->Play();
+				scene->RemoveRenderable(brickList[i]);
+				brickList.erase(i + brickList.begin());
+			}
+		}
+
+		ballPos = ballPos + vel * scene->GetDeltaTime();
+		ball->SetPosition(ballPos);
+
+		if(paddle->GetPosition().X > 785)
+			paddle->SetPosition(770, 550);
+		if(paddle->GetPosition().X < 0)
+			paddle->SetPosition(30, 550);
+		paddle->SetPosition(mouse->GetMousePosition().X, 550);
+
+=======
+		if(keyboard->IsKeyDown(ooge::KEY_F1))
+		{
+			des.Density = 2.0f;
+			z^=x;x^=z; z^=x;
+			force^=force1;force1^=force; force^=force1;
+			des.Position.Set(z,rand()%50+400);
+			ooge::PhysicsBox *box = new ooge::PhysicsBox(10,&des,"test");
+			box->SetColour(rand()%255,rand()%255,rand()%255);
+			scene->AddRenderable(box);
+			box->SetLinearVelocity(ooge::Vector2(force,0));
+			box->SetAngularVelocity(1000);
+		}
+
+		if(keyboard->IsKeyDown(ooge::KEY_ENTER))
+		{
+			for(int i = 0; i < list.size(); ++i)
+				list[i]->ApplyForce(ooge::Vector2(rand(),rand()), ooge::Vector2(0,0));
+		}
+
+>>>>>>> .r8
+		scene->RenderOneFrame();
+	}
+
+	win->Shutdown();
+	delete ballSound;
+	delete win;
+	return 0;
+}

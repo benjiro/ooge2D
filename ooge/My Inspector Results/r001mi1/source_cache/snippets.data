@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippets>
+  <file name="c:\users\ben\desktop\oogeg\dependencies\freetype\src\base\ftsystem.c" md5="">
+    <snippet line="274">
+      <line line="271"/>
+      <line line="272"/>
+      <line line="273">    memory = (FT_Memory)ft_smalloc( sizeof ( *memory ) );</line>
+      <line line="274">    if ( memory )</line>
+      <line line="275">    {</line>
+    </snippet>
+  </file>
+</snippets>

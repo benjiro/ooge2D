@@ -1,0 +1,30 @@
+#include <PhysicsBox.hpp>
+#include <Box2d.h>
+#include <PhysicsWorld.hpp>
+
+using namespace ooge;
+
+PhysicsBox::PhysicsBox(Int32 width, ActorDescription *des, const std::string &name)
+: Square(width, width, name), PhysicsActor()
+{
+	b2BodyDef bodyDef;
+	bodyDef.type = b2_dynamicBody;
+	bodyDef.position.Set(des->Position.X, des->Position.Y);
+	mBody = PhysicsWorld::GetSingletonPtr()->GetBox2DWorld()->CreateBody(&bodyDef);
+
+	b2PolygonShape dynamicBox;
+	dynamicBox.SetAsBox(width/2, width/2);
+	des->Shape = &dynamicBox;
+
+	PhysicsActor::_InitActor(des);
+}
+
+PhysicsBox::~PhysicsBox()
+{
+}
+
+void PhysicsBox::Update(Real deltaT)
+{
+	Square::SetPosition(mBody->GetPosition().x,mBody->GetPosition().y);
+	Square::SetRotation(mBody->GetAngle());
+}

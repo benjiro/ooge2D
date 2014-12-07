@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ResourceManager">
+      <UniqueIdentifier>{af356f0e-3388-4dad-aca7-85f898fbea1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Audio">
+      <UniqueIdentifier>{988cdd40-6ee3-40ed-8cb8-3b4f85591911}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{9acf8181-e2dc-4499-a777-c8f8ea6f39d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SceneManager">
+      <UniqueIdentifier>{7ec37088-9554-46ec-9e88-ba27fd20c0ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input">
+      <UniqueIdentifier>{2db11f91-e979-458a-84aa-cc767b34eedf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Physics">
+      <UniqueIdentifier>{efeaacfc-830d-4c28-975a-0792b3f47b82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="My Amplifier Results">
+      <UniqueIdentifier>{ff19e72e-f378-490a-b52e-1455126b5ccc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TestBed">
+      <UniqueIdentifier>{02cf0168-8c78-42a9-a6a5-47442875e167}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\source\ResourceManager\Font.cpp">
+      <Filter>ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\ResourceManager\FontManager.cpp">
+      <Filter>ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\ResourceManager\Image.cpp">
+      <Filter>ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\ResourceManager\Loader.cpp">
+      <Filter>ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Audio\AudioDevice.cpp">
+      <Filter>Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Audio\Sound.cpp">
+      <Filter>Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Audio\SoundBuffer.cpp">
+      <Filter>Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Audio\SoundEffect.cpp">
+      <Filter>Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Audio\SoundFile.cpp">
+      <Filter>Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Audio\SoundListener.cpp">
+      <Filter>Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Audio\SoundStream.cpp">
+      <Filter>Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Utility\Lock.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Utility\Mutex.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Utility\StringUtil.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Utility\Thread.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Utility\Timer.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Utility\Vector2.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Utility\Vector3.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\SceneManager\AnimationSequence.cpp">
+      <Filter>SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\SceneManager\Camera.cpp">
+      <Filter>SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\SceneManager\Circle.cpp">
+      <Filter>SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\SceneManager\Cull.cpp">
+      <Filter>SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\SceneManager\Object.cpp">
+      <Filter>SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\SceneManager\Renderable.cpp">
+      <Filter>SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\SceneManager\Scene.cpp">
+      <Filter>SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\SceneManager\ScreenCull.cpp">
+      <Filter>SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\SceneManager\Sprite.cpp">
+      <Filter>SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\SceneManager\SpriteAnimation.cpp">
+      <Filter>SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\SceneManager\Square.cpp">
+      <Filter>SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\SceneManager\Text.cpp">
+      <Filter>SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Input\Controller.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Input\ControllerListener.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Input\InputListener.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Input\InputManager.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Input\KeyboardListener.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Input\MouseListener.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Physics\PhysicsActor.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Physics\PhysicsDebugDraw.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Physics\PhysicsObject.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\Physics\PhysicsWorld.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="DemoFont.cpp">
+      <Filter>TestBed</Filter>
+    </ClCompile>
+    <ClCompile Include="DemoGame.cpp">
+      <Filter>TestBed</Filter>
+    </ClCompile>
+    <ClCompile Include="DemoSound.cpp">
+      <Filter>TestBed</Filter>
+    </ClCompile>
+    <ClCompile Include="DemoSprite.cpp">
+      <Filter>TestBed</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="StateManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\ResourceManager\Font.hpp">
+      <Filter>ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ResourceManager\FontManager.hpp">
+      <Filter>ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ResourceManager\GlyphContainer.hpp">
+      <Filter>ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ResourceManager\Image.hpp">
+      <Filter>ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ResourceManager\Loader.hpp">
+      <Filter>ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Audio\AudioDevice.hpp">
+      <Filter>Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Audio\Sound.hpp">
+      <Filter>Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Audio\SoundBuffer.hpp">
+      <Filter>Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Audio\SoundEffect.hpp">
+      <Filter>Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Audio\SoundFile.hpp">
+      <Filter>Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Audio\SoundListener.hpp">
+      <Filter>Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Audio\SoundStream.hpp">
+      <Filter>Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Utility\Colour.hpp">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Utility\Lock.hpp">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Utility\Math.hpp">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Utility\Matrix33.hpp">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Utility\Mutex.hpp">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Utility\Rect.hpp">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Utility\Singleton.hpp">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Utility\StringUtil.hpp">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Utility\Thread.hpp">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Utility\Timer.hpp">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Utility\Vector2.hpp">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Utility\Vector3.hpp">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SceneManager\AnimationSequence.hpp">
+      <Filter>SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SceneManager\Camera.hpp">
+      <Filter>SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SceneManager\Circle.hpp">
+      <Filter>SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SceneManager\Cull.hpp">
+      <Filter>SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SceneManager\Object.hpp">
+      <Filter>SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SceneManager\Renderable.hpp">
+      <Filter>SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SceneManager\Scene.hpp">
+      <Filter>SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SceneManager\SceneDescription.hpp">
+      <Filter>SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SceneManager\ScreenCull.hpp">
+      <Filter>SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SceneManager\Sprite.hpp">
+      <Filter>SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SceneManager\SpriteAnimation.hpp">
+      <Filter>SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SceneManager\Square.hpp">
+      <Filter>SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SceneManager\Text.hpp">
+      <Filter>SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Input\Controller.hpp">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Input\ControllerListener.hpp">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Input\InputKeys.hpp">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Input\InputListener.hpp">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Input\InputManager.hpp">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Input\KeyboardListener.hpp">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Input\MouseListener.hpp">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Physics\ActorDescription.hpp">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Physics\PhysicsActor.hpp">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Physics\PhysicsDebugDraw.hpp">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Physics\PhysicsListeners.hpp">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Physics\PhysicsObject.hpp">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Physics\PhysicsWorld.hpp">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="DemoFont.hpp">
+      <Filter>TestBed</Filter>
+    </ClInclude>
+    <ClInclude Include="DemoGame.hpp">
+      <Filter>TestBed</Filter>
+    </ClInclude>
+    <ClInclude Include="DemoSound.hpp">
+      <Filter>TestBed</Filter>
+    </ClInclude>
+    <ClInclude Include="DemoSprite.hpp">
+      <Filter>TestBed</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Common.hpp" />
+    <ClInclude Include="..\include\Config.hpp" />
+    <ClInclude Include="..\include\Ooge.hpp" />
+    <ClInclude Include="State.hpp" />
+    <ClInclude Include="StateManager.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Amplifier Results\r003hs\r003hs.ampl">
+      <Filter>My Amplifier Results</Filter>
+    </None>
+    <None Include="My Amplifier Results\r004hs\r004hs.ampl">
+      <Filter>My Amplifier Results</Filter>
+    </None>
+  </ItemGroup>
+</Project>

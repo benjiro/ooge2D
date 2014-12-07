@@ -1,0 +1,26 @@
+-r
+C:\Users\Ben\Desktop\oogeG\ooge\My Inspector Results\r001mi1
+-leak-check-only
+-no-check-system-libraries
+--search-dir
+sym:p=c:/Users/Ben/Desktop/oogeG/bin
+--search-dir
+sym=C:/Users/Ben/Desktop/oogeG
+--search-dir
+sym=c:/symbols
+--search-dir
+sym=c:/symbols/singlepdbs
+--search-dir
+sym=srv*C:/Windows/symbols*http://source.msdn.microsoft.com/symbols
+--search-dir
+sym=C:/Users/Ben/Desktop/oogeG/ooge/dir)atlmfc/src/mfcm
+--search-dir
+sym=C:/Users/Ben/Desktop/oogeG/ooge/$(vcinstalldir)atlmfc/src/atl
+--search-dir
+sym=C:/Users/Ben/Desktop/oogeG/ooge/$(vcinstalldir)crt/src
+--search-dir
+sym=c:/symbols/microsoftpublicsymbols
+--search-dir
+sym:p=C:/Users/Ben/Desktop/oogeG//lib/Debug
+--
+c:\Users\Ben\Desktop\oogeG\bin\ooge_D.exe

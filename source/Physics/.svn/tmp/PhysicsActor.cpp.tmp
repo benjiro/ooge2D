@@ -1,0 +1,85 @@
+#include <PhysicsActor.hpp>
+#include <PhysicsWorld.hpp>
+#include <Box2D.h>
+
+using namespace ooge;
+
+PhysicsActor::PhysicsActor()
+: mBody(NULL)
+{
+}
+
+PhysicsActor::~PhysicsActor()
+{
+	PhysicsWorld::GetSingletonPtr()->GetBox2DWorld()->DestroyBody(mBody);
+}
+
+void PhysicsActor::SetMass(Real mass, const Vector2 &centre, Real inerita)
+{
+	b2MassData massD;
+	massD.mass = mass;
+	massD.center.x = centre.X;
+	massD.center.y = centre.Y;
+	massD.I = inerita;
+
+	//mBody->SetMass(&massD);
+}
+
+Real PhysicsActor::GetMass() const
+{
+	return mBody->GetMass();
+}
+
+Real PhysicsActor::GetInertia() const
+{
+	return mBody->GetInertia();
+}
+
+void PhysicsActor::SetLinearVelocity(const Vector2 &v)
+{
+	mBody->SetLinearVelocity(b2Vec2(v.X, v.Y));
+}
+
+Vector2 PhysicsActor::GetLinearVelocity() const
+{
+	return Vector2(mBody->GetLinearVelocity().x, mBody->GetLinearVelocity().y);
+}
+
+void PhysicsActor::SetAngularVelocity(Real omega)
+{
+	mBody->SetAngularVelocity(omega);
+}
+
+Real PhysicsActor::GetAngularVelocity() const
+{
+	return mBody->GetAngularVelocity();
+}
+
+void PhysicsActor::ApplyForce(const Vector2 &force, const Vector2 &point)
+{
+	mBody->ApplyForce(b2Vec2(force.X, force.Y), b2Vec2(point.X, point.Y));
+}
+
+void PhysicsActor::ApplyTorque(Real torque)
+{
+	mBody->ApplyTorque(torque);
+}
+
+void PhysicsActor::ApplyImpulse(const Vector2 &impluse, const Vector2 &point)
+{
+	mBody->ApplyLinearImpulse(b2Vec2(impluse.X, impluse.Y), b2Vec2(point.X, point.Y));
+}
+
+void PhysicsActor::_InitActor(const ooge::ActorDescription *des)
+{
+	b2FixtureDef def;
+
+	def.density = des->Density;
+	def.friction = des->Friction;
+	def.isSensor = des->IsSensor;
+	def.restitution = des->Restitution;
+	def.userData = des->UserData;
+	def.shape = des->Shape;
+
+	mBody->CreateFixture(&def);
+}

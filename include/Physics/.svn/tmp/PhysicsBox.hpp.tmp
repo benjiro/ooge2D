@@ -1,0 +1,19 @@
+#ifndef _PHYSICS_BOX_HPP
+#define _PHYSICS_BOX_HPP
+
+#include <Square.hpp>
+#include <PhysicsActor.hpp>
+
+namespace ooge
+{
+	class PhysicsBox : public Square, public PhysicsActor
+	{
+	public:
+		PhysicsBox(Int32 width, ActorDescription *des, const std::string &name);
+		~PhysicsBox();
+
+		virtual void Update(Real deltaT);
+	};
+}
+
+#endif //_PHYSICS_BOX_HPP
