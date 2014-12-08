@@ -21,8 +21,11 @@ The visual studio project is setup to look for the libraries in lib/Debug or lib
 
 TODO
 ====
-Setup the project to use cmake as its project build system.
+- Setup the project to use cmake as its project build system.
+- Documentation
 
-
+Example
+=======
+TODO
 
 Demo: http://www.youtube.com/watch?v=cROtEjshZWo
